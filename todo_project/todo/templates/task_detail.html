@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+    body{
+        background-color: antiquewhite;
+    }
+    tr{
+        border: 2px solid;
+    }
+</style>
+<div class="container mt-5">
+    <h2>Task Detail</h2>
+    <table class="table">
+        <tr>
+            <th>Title</th>
+            <td>{{ task.title }}</td>
+        </tr>
+        <tr>
+            <th>Description</th>
+            <td>{{ task.description }}</td>
+        </tr>
+        <tr>
+            <th>Completed</th>
+            <td>{{ task.completed }}</td>
+        </tr>
+    </table>
+    <a href="{% url 'task_list' %}" class="btn btn-secondary">Back to Task List</a>
+</div>
+
+{% endblock %}
